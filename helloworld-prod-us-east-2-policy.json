@@ -38,12 +38,12 @@
         "s3:GetEncryptionConfiguration",
         "s3:PutEncryptionConfiguration"
       ],
-      "Resource": ["arn:aws:s3:::helloworld*serverlessdeploy*"]
+      "Resource": ["arn:aws:s3:::*"]
     },
     {
       "Effect": "Allow",
       "Action": ["s3:PutObject", "s3:GetObject", "s3:DeleteObject"],
-      "Resource": ["arn:aws:s3:::futureof-lambda-test/lambda-test/SourceArti/*"]
+      "Resource": ["arn:aws:s3:::*"]
     },
     {
       "Effect": "Allow",
