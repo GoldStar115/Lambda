@@ -8,9 +8,7 @@
         "cloudformation:Get*",
         "cloudformation:ValidateTemplate"
       ],
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Effect": "Allow",
@@ -21,20 +19,12 @@
         "cloudformation:Describe*",
         "cloudformation:UpdateStack"
       ],
-      "Resource": [
-        "arn:aws:cloudformation:us-east-2:*:stack/helloworld-stg/*"
-      ]
+      "Resource": ["arn:aws:cloudformation:us-east-2:*:stack/helloworld-stg/*"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "lambda:Get*",
-        "lambda:List*",
-        "lambda:CreateFunction"
-      ],
-      "Resource": [
-        "*"
-      ]
+      "Action": ["lambda:Get*", "lambda:List*", "lambda:CreateFunction"],
+      "Resource": ["*"]
     },
     {
       "Effect": "Allow",
@@ -48,20 +38,12 @@
         "s3:GetEncryptionConfiguration",
         "s3:PutEncryptionConfiguration"
       ],
-      "Resource": [
-        "arn:aws:s3:::helloworld*serverlessdeploy*"
-      ]
+      "Resource": ["arn:aws:s3:::helloworld*serverlessdeploy*"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "s3:PutObject",
-        "s3:GetObject",
-        "s3:DeleteObject"
-      ],
-      "Resource": [
-        "arn:aws:s3:::helloworld*serverlessdeploy*"
-      ]
+      "Action": ["s3:PutObject", "s3:GetObject", "s3:DeleteObject"],
+      "Resource": ["arn:aws:s3:::futureof-lambda-test/lambda-test/BuildArtif/*"]
     },
     {
       "Effect": "Allow",
@@ -74,9 +56,7 @@
         "lambda:RemovePermission",
         "lambda:Update*"
       ],
-      "Resource": [
-        "arn:aws:lambda:us-east-2:*:function:helloworld-stg-*"
-      ]
+      "Resource": ["arn:aws:lambda:us-east-2:*:function:helloworld-stg-*"]
     },
     {
       "Effect": "Allow",
@@ -95,19 +75,13 @@
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "iam:PassRole"
-      ],
-      "Resource": [
-        "arn:aws:iam::*:role/*"
-      ]
+      "Action": ["iam:PassRole"],
+      "Resource": ["arn:aws:iam::*:role/*"]
     },
     {
       "Effect": "Allow",
       "Action": "kinesis:*",
-      "Resource": [
-        "arn:aws:kinesis:*:*:stream/helloworld-stg-us-east-2"
-      ]
+      "Resource": ["arn:aws:kinesis:*:*:stream/helloworld-stg-us-east-2"]
     },
     {
       "Effect": "Allow",
@@ -118,25 +92,17 @@
         "iam:DeleteRolePolicy",
         "iam:DeleteRole"
       ],
-      "Resource": [
-        "arn:aws:iam::*:role/helloworld-stg-us-east-2-lambdaRole"
-      ]
+      "Resource": ["arn:aws:iam::*:role/helloworld-stg-us-east-2-lambdaRole"]
     },
     {
       "Effect": "Allow",
       "Action": "sqs:*",
-      "Resource": [
-        "arn:aws:sqs:*:*:helloworld-stg-us-east-2"
-      ]
+      "Resource": ["arn:aws:sqs:*:*:helloworld-stg-us-east-2"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": [
-        "*"
-      ]
+      "Action": ["cloudwatch:GetMetricStatistics"],
+      "Resource": ["*"]
     },
     {
       "Action": [
@@ -144,18 +110,12 @@
         "logs:CreateLogStream",
         "logs:DeleteLogGroup"
       ],
-      "Resource": [
-        "arn:aws:logs:us-east-2:*:*"
-      ],
+      "Resource": ["arn:aws:logs:us-east-2:*:*"],
       "Effect": "Allow"
     },
     {
-      "Action": [
-        "logs:PutLogEvents"
-      ],
-      "Resource": [
-        "arn:aws:logs:us-east-2:*:*"
-      ],
+      "Action": ["logs:PutLogEvents"],
+      "Resource": ["arn:aws:logs:us-east-2:*:*"],
       "Effect": "Allow"
     },
     {
@@ -165,38 +125,22 @@
         "logs:DescribeLogGroups",
         "logs:FilterLogEvents"
       ],
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "events:Put*",
-        "events:Remove*",
-        "events:Delete*"
-      ],
-      "Resource": [
-        "arn:aws:events:*:*:rule/helloworld-stg-us-east-2"
-      ]
+      "Action": ["events:Put*", "events:Remove*", "events:Delete*"],
+      "Resource": ["arn:aws:events:*:*:rule/helloworld-stg-us-east-2"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "events:DescribeRule"
-      ],
-      "Resource": [
-        "arn:aws:events:us-east-2:*:rule/helloworld-stg-*"
-      ]
+      "Action": ["events:DescribeRule"],
+      "Resource": ["arn:aws:events:us-east-2:*:rule/helloworld-stg-*"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "s3:CreateBucket"
-      ],
-      "Resource": [
-        "arn:aws:s3:::*"
-      ]
+      "Action": ["s3:CreateBucket"],
+      "Resource": ["arn:aws:s3:::*"]
     }
   ]
 }
