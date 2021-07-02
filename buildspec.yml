@@ -7,9 +7,9 @@ phases:
       - npm install --silent --no-progress -g serverless
   pre_build:
     commands:
-      - sudo npm install --unsafe-perm --no-progress --silent
-      - mkdir -p target/stg
-      - mkdir -p target/prod
+      - npm install --no-progress --silent
+      - sudo mkdir -p target/stg
+      - sudo mkdir -p target/prod
       - serverless package --package target/stg --stage stg -v -r us-east-2
       - serverless package --package target/prod --stage prod -v -r us-east-2
 
